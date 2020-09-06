@@ -9,11 +9,11 @@ export function enableImagesScrolling() {
                 const element = document.getElementById(id);
                 const startScroll = parseInt(element.getAttribute("startScroll")) * window.innerHeight / 100;
                 if(scrollPos > startScroll) {
-                    element.style.position = 'absolute';
                     element.style.top = Math.round(startScroll).toString() + "px";
+                    element.style.position = 'absolute';
                 } else {
                     element.style.position = 'fixed';
-                    element.style.top = null;
+                    element.style.top = "0px";
                 }
             }
         } catch (e) {

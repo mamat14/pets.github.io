@@ -32,6 +32,30 @@
 </head>
 <body class="text-center">
 <!-- Navigation -->
+<div class="vw-100 vh-100"
+     startScroll="0"
+     id="img1"
+     style="background-image: url(src/img/bg2.jpg); background-position: center;
+            background-size: cover;
+            position: fixed; z-index: -100;">
+</div>
+
+<div class="vw-100 vh-100"
+     startScroll="190"
+     id="img2"
+     style="background-image: url(src/img/bg1.jpg); background-position: center;
+            background-size: cover;
+            position: fixed; z-index: -200;">
+</div>
+
+<div class="vw-100 vh-100"
+     startScroll="1000"
+     id="img3"
+     style="background-image: url(src/img/bg3.jpg); background-position: center;
+            background-size: cover;
+            position: fixed; z-index: -300;">
+</div>
+
 <header class="fixed-top container-fluid bg-dark">
     <nav class="nav nav-fill">
         <a class="nav-item nav-link text-light" href="#idea">Home</a>
@@ -40,9 +64,9 @@
 </header>
 
 <main role="main" class="container-fluid">
-    <section class="vh-100 row align-items-center justify-content-center" id="idea">
+    <section class="row align-items-center justify-content-center vh-100" id="idea">
         <div class="col-md-6">
-            <div class="jumbotron">
+            <div class="jumbotron" style="background: rgba(204, 204, 204, 0.5);">
                 <h1 class="display-4">Slots.</h1>
                 <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                 <hr class="my-4">
@@ -51,10 +75,11 @@
             </div>
         </div>
     </section>
-    <div style="height: 50vh"></div>
+
+    <div style="height: 40vh"></div>
 
     <section class="vh-100 row align-items-center justify-content-center" id="slots">
-        <div class="col-md-6 text-light">
+        <div class="col-md-6 text-light" style="background: rgba(204, 204, 204, 0.5);">
             <h1 class="cover-heading">Some title</h1>
             <p class="lead">Text about us. Cover is a one-page template for building simple and beautiful home pages.
                 Download, edit the
@@ -67,7 +92,7 @@
         </div>
     </section>
 
-    <div style="height: 40vh"></div>
+    <div style="height: 80vh"></div>
 
     <section class="vh-100 row align-items-center justify-content-center" id="screen3">
         <div class="col-md-6">
@@ -84,31 +109,12 @@
 
 <footer class="container-fluid">
     <div>
-        <p>Designed at Dnipro, by Hans.
-        </p>
+        <p>Designed at Dnipro, by Hans.</p>
     </div>
 </footer>
 
-<div class="container-fluid vh-100"
-     startScroll="0"
-     id="img1"
-     style="position: absolute; z-index: -100; top: 0; object-fit: cover; background-color: coral">
-</div>
-
-<div class="container-fluid vh-100"
-     startScroll="160"
-     id="img2"
-     style="position: absolute; z-index: -200; top: 0; object-fit: cover; background-color: dimgrey">
-</div>
-
-<div class="container-fluid vh-100"
-     startScroll="1000"
-     id="img3"
-     style="position: absolute; z-index: -300; top: 0; object-fit: cover; background-color: lime">
-</div>
-
 <!-- JavaScript includes -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 <script src="dist/js/app.js"></script>
 </body>
 </html>

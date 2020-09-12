@@ -31,9 +31,9 @@ module.exports = (env, argv) => {
 
         // development server with hot-reload
         devServer: {
-            publicPath: '/dist/',
             watchContentBase: true,
             compress: true,
+            publicPath: "./",
         },
 
         // entry files to compile (relative to the base dir)
@@ -52,8 +52,8 @@ module.exports = (env, argv) => {
             filename: "js/app.js",
             // base build directory
             path: path.resolve(__dirname, "dist"),
-            // path to build relative asset links
-            publicPath: "./"
+            // path to build relative asset links,
+            publicPath: "./",
         },
 
         // plugins configurations
@@ -125,7 +125,7 @@ module.exports = (env, argv) => {
                         {
                             loader: "file-loader",
                             options: {
-                                name: "img/[name].[ext]"
+                                name: "[path][name].[ext]",
                             }
                         },
                         {

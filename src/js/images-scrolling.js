@@ -21,7 +21,7 @@ export function enableImagesScrolling() {
             for(const id of ids) {
                 const el = document.getElementById(id);
                 console.log("setting bg");
-                el.style.backgroundImage = `url(${bgs[i]})`;
+                el.style.backgroundImage = `url(./${bgs[i]})`;
                 i+=1;
             }
         }

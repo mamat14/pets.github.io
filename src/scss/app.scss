@@ -5,13 +5,13 @@
 @import "~bootstrap/scss/bootstrap";
 @import "material-icons";
 @import "carousel";
+@import "navbar-toggle-x";
+
 /* Background Gradient for Monochromatic Colors */
 .landing_background {
-  background-color: #FFFFFF;
   /* For WebKit (Safari, Chrome, etc) */
   background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#D9D690), to(#FFFFFF)) no-repeat;
   /* Mozilla,Firefox/Gecko */
-  background: #FFFFFF -moz-linear-gradient(top, #D9D690, #FFFFFF) no-repeat;
   /* IE 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#D9D690, endColorstr=#FFFFFF) no-repeat;
   /* IE 8 */

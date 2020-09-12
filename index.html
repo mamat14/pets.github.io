@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bootstrap 4 Template</title>
+    <title>Погладить можно?</title>
 
     <!-- Website icon -->
     <link rel="icon" type="image/png" href="http://placehold.it/20x20">
@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="dist/css/style.css">
 
     <!-- Meta information -->
-    <meta name="author" content="">
+    <meta name="author" content="Hans">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="robots" content="index, follow">
 
     <!-- Social media (frontend only) -->
-    <meta property="og:site_name" content=""/>
-    <meta property="og:title" content=""/>
+    <meta property="og:site_name" content="Погладить можно?"/>
+    <meta property="og:title" content="Погладить можно?"/>
     <meta property="og:type" content="website"/>
     <meta property="og:image" content=""/>
     <meta property="og:url" content=""/>
@@ -31,12 +31,15 @@
     <meta property="og:locale" content="en_US">
 </head>
 <body class="text-center">
+<script src="dist/js/app.js"></script>
+
 <!-- Navigation -->
 <div class="vw-100 vh-100"
-     startScroll="30"
+     startScroll="0"
      id="img1"
      style="background-image: url(src/img/bg2.jpg); background-position: center;
             background-size: cover;
+            background-color: white;
             position: absolute; top: 0; z-index: -1;
             filter: contrast(130%)"
             >
@@ -48,6 +51,7 @@
      style="background-image: url(src/img/bg1.jpg);
             background-position: center;
             background-size: cover;
+            background-color: black;
             position: fixed; top: 0; z-index: -2;">
 </div>
 
@@ -57,6 +61,7 @@
      style="background-image: url(src/img/bg3.jpg);
             background-position: center;
             background-size: cover;
+            background-color: white;
             position: fixed; top: 0; z-index: -3;">
 </div>
 
@@ -66,12 +71,31 @@
      style="position: fixed; top:0; z-index: -4;">
 </div>
 
-<!--<header class="fixed-top container-fluid bg-dark">-->
-<!--    <nav class="nav nav-fill">-->
-<!--        <a class="nav-item nav-link text-light" href="#idea">Home</a>-->
-<!--        <a class="nav-item nav-link disabled" href="#">Slots</a>-->
-<!--    </nav>-->
-<!--</header>-->
+<header class="fixed-top container-fluid bg-dark p-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/src/img/П.svg" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-collapse-x" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-x">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Домой<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Магазин</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">О нас</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
 <main role="main" class="container-fluid">
     <section class="row align-items-center justify-content-center vh-100" id="idea">
@@ -91,12 +115,15 @@
     <div style="height: 30vh"></div>
 
     <section class="vh-100 row align-items-center justify-content-center" id="slots">
-        <div class="col-md-6 text-light">
-            <div class="jumbotron" style="background: rgba(204, 204, 204, 0.0);">
-                <h1 class="display-4" style="font-size: 3rem; font-family: 'Helvetica Neue', sans-serif; font-weight: 400">ПРИВЕТ</h1>
-                <p class="lead">Очень важное сообщение. Очень важное сообщение. Очень важное сообщение</p>
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <a href="#screen3" class="btn btn-outline-light">Дальше</a>
+        <div class="col-md-6">
+            <div class="jumbotron jumbotron-fluid" style="background: rgba(0,0,0,0); color: white; text-shadow: black 1px 1px 0">
+                <div class="container-fluid">
+                    <h2 class="display-4" style="font-weight: 600">Привет</h2>
+                    <p class="lead" style="backdrop-filter: blur(1px); font-size: 1rem">Добро пожаловать в магазин.</p>
+                </div>
+                <p class="lead">
+                    <a href="#screen3" class="btn btn-outline-light">Дальше</a>
+                </p>
             </div>
         </div>
     </section>
@@ -105,11 +132,14 @@
 
     <section class="vh-100 row align-items-center justify-content-center" id="screen3">
         <div class="col-md-6">
-            <div class="jumbotron" style="background: rgba(204, 204, 204, 0.0);">
-                <h1 class="display-4" style="font-size: 3rem; font-family: 'Helvetica Neue', sans-serif; font-weight: 400">ПРИВЕТ</h1>
-                <p class="lead">Очень важное сообщение. Очень важное сообщение. Очень важное сообщение</p>
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <a href="#idea" class="btn btn-outline-light">Дальше</a>
+            <div class="jumbotron jumbotron-fluid" style="background: rgba(0,0,0,0); color: black; text-shadow: white 1px 1px 0">
+                <div class="container-fluid">
+                    <h2 class="display-4" style="font-weight: 600">Привет</h2>
+                    <p class="lead" style="backdrop-filter: blur(1px); font-size: 1rem">Добро пожаловать в магазин.</p>
+                </div>
+                <p class="lead">
+                    <a href="#idea" class="btn btn-outline-dark">Дальше</a>
+                </p>
             </div>
         </div>
     </section>
@@ -117,6 +147,5 @@
 
 <!-- JavaScript includes -->
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
-<script src="dist/js/app.js"></script>
 </body>
 </html>

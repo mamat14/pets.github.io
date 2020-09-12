@@ -5,6 +5,7 @@
  */
 
 // import plugins
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require('path');
 const webpack = require('webpack');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
@@ -28,12 +29,12 @@ module.exports = (env, argv) => {
         // absolute path to the base directory
         context: path.resolve(__dirname, "src"),
 
-	// development server with hot-reload
-	devServer: {
+        // development server with hot-reload
+        devServer: {
             publicPath: '/dist/',
             watchContentBase: true,
             compress: true,
-	},
+        },
 
         // entry files to compile (relative to the base dir)
         entry: [
@@ -52,11 +53,14 @@ module.exports = (env, argv) => {
             // base build directory
             path: path.resolve(__dirname, "dist"),
             // path to build relative asset links
-            publicPath: "../"
+            publicPath: "./"
         },
 
         // plugins configurations
         plugins: [
+            new HtmlWebpackPlugin({
+                template: "index.html",
+            }),
             // save compiled SCSS into separated CSS file
             new MiniCssExtractPlugin({
                 filename: "css/style.css"
@@ -99,6 +103,11 @@ module.exports = (env, argv) => {
         // custom loaders configuration
         module: {
             rules: [
+                //html loader
+                {
+                    test: /\.html$/,
+                    loader: 'html-loader',
+                },
                 // styles loader
                 {
                     test: /\.(sa|sc|c)ss$/,
@@ -111,7 +120,7 @@ module.exports = (env, argv) => {
 
                 // images loader
                 {
-                    test: /\.(png|jpe?g|gif)$/,
+                    test: /\.(png|jpe?g|gif|svg)$/,
                     loaders: [
                         {
                             loader: "file-loader",
@@ -150,12 +159,6 @@ module.exports = (env, argv) => {
                             }
                         },
                     ],
-                },
-
-                // svg inline 'data:image' loader
-                {
-                    test: /\.svg$/,
-                    loader: "svg-url-loader"
                 },
             ]
         },

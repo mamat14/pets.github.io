@@ -8,5 +8,6 @@
 /benchmark/fixtures
 /examples/*/js
 /coverage
+/dist
 .DS_Store
 *.log

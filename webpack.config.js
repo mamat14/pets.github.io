@@ -33,7 +33,8 @@ module.exports = (env, argv) => {
         devServer: {
             watchContentBase: true,
             compress: true,
-            publicPath: "./",
+            contentBase: path.join(__dirname, 'dist'),
+            publicPath: "/"
         },
 
         // entry files to compile (relative to the base dir)
@@ -51,9 +52,9 @@ module.exports = (env, argv) => {
             // bundle relative name
             filename: "js/app.js",
             // base build directory
-            path: path.resolve(__dirname, "dist"),
+            path: path.resolve(__dirname, 'dist'),
             // path to build relative asset links,
-            publicPath: "./",
+            publicPath: "/",
         },
 
         // plugins configurations
@@ -125,7 +126,7 @@ module.exports = (env, argv) => {
                         {
                             loader: "file-loader",
                             options: {
-                                name: "[path][name].[ext]",
+                                name: "img/[name].[ext]",
                             }
                         },
                         {

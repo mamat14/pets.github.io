@@ -4,7 +4,7 @@ const bg3 =  require("../img/bg3.jpg");
 
 export function enableImagesScrolling() {
     const ids = ["img1", "img2", "img3"];
-    const bgs = [bg1, bg2, bg3].map(path => path.substring(1));
+    const bgs = [bg1, bg2, bg3];
     bgs.forEach(bg => console.log(bg));
     const loaded = [false, false, false];
 
